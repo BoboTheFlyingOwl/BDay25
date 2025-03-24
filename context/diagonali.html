@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/gameStyle.css">
+    <link rel="stylesheet" href="../css/diagonali.css">
+    <title>Diagonali</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <img src="../img/BannerShort.png">
+
+            <div class="menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="norinori.html">gioco1</a></li>
+                    <li><a class="active" href="diagonali.html">Diagonali</a></li>
+                    <li><a href="mastermind.html">gioco3</a></li>
+                    <li><a href="nonogram.html">gioco4</a></li>
+                    <li><a href="binario.html">gioco5</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="game">
+                <div class="gameTable" id="gameTable">
+
+                </div>
+                <div class="gameButton">
+                    <button onclick="resetGame()">Reset</button>
+
+                    <select id="puzzleSelect" onchange="loadPuzzle()">
+                        <option value="defaul1">Puzzle 1</option>
+                        <option value="puzzle2">Puzzle 2</option>
+                        <option value="puzzle3">Puzzle 3</option>
+                        <option value="puzzle4">Puzzle 4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="rules">
+                <h2>Regole</h2>
+
+                <p><b>Diagonali</b> (anche noto come <b>Gokigen Naname</b>) è un rompicapo di logica con regole
+                    semplici e soluzioni
+                    impegnative.</p>
+
+                <p>Le regole di <b>Diagonali</b> sono semplici:<br>
+                    Bisogna sistemare una diagonale in <b>CIASCUNA</b> casella rispettando le seguenti condizioni:
+                </p>
+
+                <ul>
+                    <li>I numeri indicano quante diagonali si incontrano in quel punto.</li>
+                    <li>Le linee <b>non devono</b> formare un percorso chiuso.</li>
+                </ul>
+
+                <h3>Come giocare</h3>
+
+                <ul>
+                    <li>Il <b>primo click</b> crea una diagonale da sinistra in alto a destra in basso (↘).</li>
+                    <li>Il <b>secondo click</b> crea una diagonale da destra in alto a sinistra in basso (↙).</li>
+                    <li>Il <b>terzo click</b> rimuove la diagonale, lasciando la casella bianca.</li>
+                </ul>
+
+                <p><b>Buona fortuna!</b> ✏️🔲</p>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+    <script src="../script/diagonali.js">
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/gameStyle.css">
+    <link rel="stylesheet" href="../css/matermind.css">
+    <title>Mastermind</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <img src="../img/BannerShort.png">
+
+            <div class="menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="norinori.html">gioco 1</a></li>
+                    <li><a href="diagonali.html">gioco 2</a></li>
+                    <li><a class="active" href="#">Mastermind</a></li>
+                    <li><a href="nonogram.html">gioco 4</a></li>
+                    <li><a href="binario.html">gioco5</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="game">
+                <div id="attemptsDisplay">Tentativi rimasti: 10</div>
+                <div class="gameTable" id="gameBoard">
+
+                </div>
+                <p id="message"></p>
+                <div class="gameButton">
+                    <button onclick="resetGame()">Play</button>
+
+                    <select onchange="setDifficulty(this.value)">
+                        <option value="easy">Facile</option>
+                        <option value="normal">Normale</option>
+                        <option value="hard">Difficile</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="rules">
+                <h2>Regole</h2>
+
+
+                <p><b>Mastermind</b> è un gioco di logica in cui il giocatore deve indovinare una sequenza segreta di
+                    colori attraverso
+                    tentativi e feedback.</p>
+
+                <p>Le regole di <b>Mastermind</b> sono semplici:<br>
+                    Devi scoprire la sequenza segreta rispettando le seguenti condizioni:</p>
+
+                <ul>
+                    <li>La sequenza segreta è composta da un numero di colori che varia in base alla difficoltà:
+                        <ul>
+                            <li><b>Facile</b>: 4 colori</li>
+                            <li><b>Normale</b>: 6 colori</li>
+                            <li><b>Difficile</b>: 8 colori</li>
+                            <li><b>Esperto</b>: 10 colori</li>
+                        </ul>
+                    </li>
+                    <li>In ogni tentativo devi proporre una sequenza dello stesso numero di colori.</li>
+                    <li>Dopo ogni tentativo, riceverai un feedback sotto forma di pallini:
+                        <ul>
+                            <li><b>Pallino nero ⚫</b>: Un colore è corretto e nella posizione giusta.</li>
+                            <li><b>Pallino bianco ⚪</b>: Un colore è corretto ma nella posizione sbagliata.</li>
+                        </ul>
+                    </li>
+                    <li>Il giocatore deve usare i feedback per affinare la propria strategia e indovinare la sequenza
+                        entro un numero
+                        massimo di tentativi.</li>
+                </ul>
+
+                <p>Il gioco termina quando:</p>
+                <ul>
+                    <li>Il giocatore indovina esattamente la sequenza segreta (tutti i pallini sono neri).</li>
+                    <li>Il giocatore esaurisce il numero massimo di tentativi e perde la partita.</li>
+                </ul>
+
+                <p><b>Buona fortuna!</b> 🎨🔎</p>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../script/mastermind.js">
+
+    </script>
+
+</body>
+
+</html>

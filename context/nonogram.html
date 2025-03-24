@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/gameStyle.css">
+    <link rel="stylesheet" href="../css/nonogram.css">
+    <title>Nonogram</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <img src="../img/BannerShort.png">
+
+            <div class="menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="norinori.html">gioco1</a></li>
+                    <li><a href="diagonali.html">gioco2</a></li>
+                    <li><a href="mastermind.html">gioco3</a></li>
+                    <li><a class="active" href="nonogram.html">Nonogram</a></li>
+                    <li><a href="binario.html">gioco5</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="game">
+                <div class="gameTable" id="gameTable">
+
+                </div>
+                <div class="gameButton">
+                    <button onclick="resetGame()">Reset</button>
+
+                    <select id="puzzleSelect" onchange="loadPuzzle()">
+                        <option value="defaul1">Puzzle 1</option>
+                        <option value="puzzle2">Puzzle 2</option>
+                        <option value="puzzle3">Puzzle 3</option>
+                        <option value="puzzle4">Puzzle 4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="rules">
+                <h2>Regole</h2>
+
+                <p><b>Nonograms</b> è un rompicapo con regole semplici e soluzioni stimolanti.</p>
+
+                <p>Le regole di <b>Nonograms</b> sono semplici:<br>
+                    Si ha a disposizione una griglia formata da quadratini, in cui ogni quadratino deve essere colorato
+                    di nero
+                    (pieno) oppure segnato con una X (vuoto). Una serie di quadratini neri contigui formano una linea. A
+                    destra di
+                    ogni riga della griglia sono indicate le lunghezze delle linee presenti nella riga, separate tra
+                    loro da almeno
+                    un quadratino vuoto. Sopra ogni colonna della griglia sono indicate le lunghezze delle linee
+                    presenti nella
+                    colonna, separate tra loro da almeno un quadratino vuoto. L'obiettivo è trovare tutti i quadratini
+                    neri della
+                    griglia.
+                </p>
+
+                <h3>Come giocare</h3>
+
+                <ul>
+                    <li>Il <b>primo click</b> colora la casella di nero (piena).</li>
+                    <li>Il <b>secondo click</b> imposta la casella a bianca (vuota).</li>
+                </ul>
+
+                <p><b>Buona fortuna!</b> 🎨🔎</p>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <script src="../script/nonogram.js">
+
+    </script>
+
+</body>
+
+</html>

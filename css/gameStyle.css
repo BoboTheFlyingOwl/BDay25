@@ -1,0 +1,223 @@
+@import url(color.css);
+
+.wrapper {
+    margin: 5px 2px 5px 2px;
+    background-color: var(--color_nav);
+    height: 80%;
+
+}
+
+body {
+    background-color: var(--color_nav);
+}
+
+
+
+.title {
+    background-color: orangered;
+}
+
+.menu {
+
+    background-color: var(--color_nav);
+    padding: 5px;
+
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    display: table;
+    background-color: var(--color_nav);
+
+}
+
+.menu li {
+    float: left;
+
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu .active {
+    background-color: var(--color_nav_selected);
+    /*border-radius: 15%;*/
+}
+
+/* Change the link color to #111 (black) on hover */
+.menu li a:hover {
+    background-color: var(--color_nav_select);
+}
+
+.main {
+    background-color: var(--color_bg1);
+    padding: 25px;
+
+}
+
+.code {
+    margin-left: 41%;
+    margin-right: auto;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 60%;
+}
+
+
+.code .input {
+    width: 35px;
+    text-align: center;
+}
+
+.code button {
+    margin-left: 10%;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.game {
+    background-color: var(--color_bg2);
+    margin-top: 20px;
+    padding-top: 20px;
+    margin: auto;
+}
+
+
+
+
+.rules {
+    padding: 10%
+}
+
+.banner img {
+    width: 100%;
+
+}
+
+
+
+.regalo {
+    background-color: #4CC9F0;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.contenuto {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.img {
+    flex: 0 0 40%;
+    max-width: 40%;
+
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+
+}
+
+.descrizione {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testo {
+    margin-bottom: 10px;
+}
+
+.link ul {
+    list-style: none;
+    padding: 0;
+}
+
+.link li {
+    margin-bottom: 5px;
+}
+
+.link a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+    padding: 20px;
+    background-color: var(--color_bg2);
+    border: 2px solid var(--color_bg1);
+    margin-top: 20px;
+
+
+}
+
+.hidden h2 {}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 60%;
+    background-color: var(--color_bg);
+    /* Sfondo bianco */
+    border-radius: 12px;
+    /* Angoli più arrotondati */
+    overflow: hidden;
+    /* Per mantenere l'effetto sui bordi */
+    border: 6px solid white;
+    /* Bordo bianco più spesso */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Ombra più marcata */
+}
+
+th,
+td {
+    padding: 12px;
+    border: 2px solid var(--color_bg2);
+}
+
+th {
+    background-color: var(--color_nav);
+    /* Intestazione colorata */
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: var(--color_bg1);
+    /* Sfondo più chiaro */
+    color: black;
+}

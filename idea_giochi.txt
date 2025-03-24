@@ -1,0 +1,29 @@
+* NoriNori A1 A2 A3 A4
+* Diagonali B1 B2 B3 B4
+* MasterMind C1 C2 C3 C4
+* Nonograms D1 D2 D3 D4
+* Binario E1 E2 E3 E4
+
+
+Liste:
+    X BoardGame
+        X Low 
+        X Medium
+        X High
+    - Giochi (Unica lista)
+        - Switch: Mario Wonder, zelda tears, Octh path travel, cult of the lamb
+        - Ps: Wu kong, Hogwar legacy, Ac Shadow
+    - Manga: Una serie di sfortunati eventi (Libri), Diari di una speziale, dr stone,  
+    
+
+
+Codici: (all: mani fest azi 1)
+m a n i - f e s t - a z i - 1 
+B1 D4 B4 E5 - A3 D1 B2 C3 - D2 C1 B5 - E2
+ 
+    A       B    C      D       E 
+    4iur  mr6h  zrvj  elgh  ____   (1) -> A1 B1 C1 D1
+    ____  sugi  3rgh  au3z  1piu   (2) -> B2 C2 D2 E1
+    fprt  ____  tltz  7ujk  2rtg   (3) -> A2 C3 D3 E2
+    2u5y  nuna  ____  aitz  3ty2   (4) -> A3 B3 D4 E3
+    8utr  iyvn  6uyi  ____  igiq   (5) -> A4 B4 C4 E4

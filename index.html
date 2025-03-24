@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/gameStyle.css">
+    <link rel="stylesheet" href="css/norinori.css">
+
+    <title>Bobo Compleanno</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <img src="img/Banner copia.png">
+            <div class="menu">
+                <ul>
+                    <li><a class="active" href="context/norinori.html">Home</a></li>
+                    <li><a href="context/norinori.html">gioco1</a></li>
+                    <li><a href="context/diagonali.html">gioco2</a></li>
+                    <li><a href="context/mastermind.html">gioco3</a></li>
+                    <li><a href="context/nonogram.html">gioco4</a></li>
+                    <li><a href="context/binario.html">gioco5</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+
+
+            <div class="presentazione">
+                <h1>🎉 Benvenuti nel sito del mio compleanno! 🎂🎁</h1>
+
+                <p>Ciao a tutti e benvenuti! 🎈 Questo non è un sito qualsiasi... qui dovrete mettere alla prova la
+                    vostra logica e il
+                    vostro ingegno per scoprire le liste e le sorprese che ho preparato per voi.
+                    Avventurandovi tra le prove, vi troverete a gestire risorse preziose, a esplorare terre inesplorate
+                    e a costruire
+                    percorsi ingegnosi. Solo chi saprà ottimizzare al meglio le proprie mosse potrà arrivare fino in
+                    fondo!</p>
+
+                <h2>🔑 Come funziona?</h2>
+                <p>Per sbloccare i contenuti nascosti, dovrete risolvere dei <strong>puzzle matematici</strong> che vi
+                    forniranno delle
+                    chiavi di <strong>4 lettere</strong>.
+                    Ogni chiave corrisponde a una riga della tabella qui sotto: trovandola e inserendola nel punto
+                    giusto, potrete
+                    proseguire nel vostro viaggio.
+                    Che siate esploratori in cerca di antiche rovine, costruttori di imponenti dighe o avventurieri
+                    nello spazio
+                    profondo, qui ci sarà sempre una sfida ad attendervi!</p>
+
+                <h2>🧩 Dove trovare i puzzle?</h2>
+                <p>Per giocare a un puzzle cliccate un gioco sulla navbar. Nelle pagine troverete le regole e le
+                    istruzioni: sarà come
+                    gestire la produzione di una frenetica catena di montaggio o ottimizzare il flusso di risorse in un
+                    delicato
+                    equilibrio strategico.
+                    Attenzione però! A volte il tempo stringe e il caos regna sovrano... riuscirete a mantenere il
+                    sangue freddo?</p>
+
+                <h2>🎯 Obiettivo</h2>
+                <p>Riuscirete a sbloccare tutte le liste? Solo i più veloci e brillanti potranno scoprire tutti i
+                    segreti!
+                    Forse vi ritroverete a navigare tra galassie sconosciute o a fare scelte difficili per sopravvivere
+                    nella giungla...
+                    ma niente paura, con la giusta strategia tutto è possibile!</p>
+
+                <p><strong>Buon divertimento e... che la matematica sia con voi! 🚀</strong></p>
+
+                <div class="table-container">
+                    <table border="1">
+                        <tr>
+                            <th>Gioco</th>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>C</th>
+                            <th>D</th>
+                            <th>E</th>
+                        </tr>
+                        <tr>
+                            <td>Prima</td>
+                            <td>puzzle1</td>
+                            <td>puzzle1</td>
+                            <td>puzzle1</td>
+                            <td>puzzle1</td>
+                            <td>____</td>
+                        </tr>
+                        <tr>
+                            <td>Seconda</td>
+                            <td>____</td>
+                            <td>puzzle2</td>
+                            <td>puzzle2</td>
+                            <td>puzzle2</td>
+                            <td>puzzle1</td>
+                        </tr>
+                        <tr>
+                            <td>Terza</td>
+                            <td>puzzle2</td>
+                            <td>____</td>
+                            <td>puzzle3</td>
+                            <td>puzzle3</td>
+                            <td>puzzle2</td>
+                        </tr>
+                        <tr>
+                            <td>Quarta</td>
+                            <td>puzzle3</td>
+                            <td>puzzle3</td>
+                            <td>____</td>
+                            <td>puzzle4</td>
+                            <td>puzzle3</td>
+                        </tr>
+                        <tr>
+                            <td>Quinta</td>
+                            <td>puzzle4</td>
+                            <td>puzzle4</td>
+                            <td>puzzle4</td>
+                            <td>____</td>
+                            <td>puzzle4</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h2>Il segreto più oscuro</h2>
+                <p>
+                    Esiste una parola più segreta delle altre, nascosta tra i puzzle. Per scoprirla, devi risolvere i
+                    seguenti indizi e
+                    ottenere le parole corrispondenti dalla tabella.
+                    Una volta trovate, prendi la prima lettera di ciascuna parola e inseriscila nella pagina.
+
+                    <br><br>
+                    **Indizi da risolvere:**
+                    <strong>B1 D4 B4 E5 - A3 D1 B2 C3 - D2 C1 B5 - E2</strong>
+                </p>
+
+
+            </div>
+
+
+            <form action="checkCode" class="code">
+                <input type="text" id="cell1" class="input" maxlength="4"> -
+                <input type="text" id="cell2" class="input" maxlength="4"> -
+                <input type="text" id="cell3" class="input" maxlength="4"> -
+                <input type="text" id="cell4" class="input" maxlength="4">
+                <br>
+                <button type="button" id="verifyButton"> Verify </button>
+
+            </form>
+
+
+            <div id="section1" class="hidden">
+                <h2>High rank</h2>
+                <p>Ho suddiviso i giochi in scatola in tre categorie per raggiungere la tripla cifra:
+                    <strong>High, Mid
+                        e Low</strong>,
+                    ciascuna basata su criteri specifici. Queste liste sono dinamiche: un gioco può spostarsi tra
+                    categorie adiacenti in
+                    base agli stessi criteri. Tuttavia, se un gioco scende di livello ed è già nella categoria
+                    <strong>Low</strong>, può
+                    essere rimosso dalla lista. Inoltre, i tre migliori giochi di ogni categoria sono evidenziati con
+                    una stellina
+                    accanto al nome⭐. Utilizzate il link qui sotto per cercare i giochi:
+                </p>
+                <div class="link">
+                    <ul>
+                        <li><a href=" https://fantasiastore.it/it/">Fantasia</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="list">
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/brass-birmingham.jpg" alt="Brass: Birmingham">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>Brass: Birmingham</strong> è un gioco di strategia economica ambientato
+                                    durante
+                                    la rivoluzione
+                                    industriale.
+                                    I giocatori devono costruire un motore economico sfruttando carbone, ferro e birra
+                                    per
+                                    sviluppare
+                                    industrie e connessioni commerciali.
+                                    Il gioco richiede pianificazione a lungo termine e una forte gestione delle risorse.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Strategia, Economico</p>
+                                    <p><strong>Numero di giocatori:</strong> 2-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 60-120 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Strategia</a></li>
+                                        <li><a href="#">Economia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/dei.jpg" alt="DEI - Dividi et Impera">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>DEI - Dividi et Impera</strong> è un gioco di strategia e controllo del
+                                    territorio ambientato in
+                                    un futuro post-apocalittico.
+                                    I giocatori guidano diverse fazioni che competono per le risorse in un mondo
+                                    devastato.
+                                    La gestione
+                                    dell'economia e il controllo delle aree sono fondamentali per vincere.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Strategia, Controllo del territorio</p>
+                                    <p><strong>Numero di giocatori:</strong> 2-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 90-120 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Strategia</a></li>
+                                        <li><a href="#">Controllo del territorio</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/hegemony.jpg" alt="Hegemony">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>⭐Hegemony</strong> è un gioco asimmetrico in cui i giocatori assumono ruoli
+                                    politici e sociali,
+                                    come la classe lavoratrice, la borghesia o il governo.
+                                    Ogni fazione ha obiettivi e meccaniche diverse, creando un'esperienza profonda e
+                                    altamente strategica.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Politico, Asimmetrico</p>
+                                    <p><strong>Numero di giocatori:</strong> 2-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 120-180 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Politico</a></li>
+                                        <li><a href="#">Asimmetrico</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/food_chain_magnate.jpg" alt="Food Chain Magnate">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>⭐ Food Chain Magnate</strong> è un gioco di strategia in cui i giocatori
+                                    gestiscono una catena di
+                                    ristoranti, competendo per attrarre clienti.
+                                    È caratterizzato da una forte componente economica e un sistema di gestione delle
+                                    risorse molto
+                                    approfondito.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Strategia, Economico</p>
+                                    <p><strong>Numero di giocatori:</strong> 2-5</p>
+                                    <p><strong>Tempo di gioco:</strong> 120-180 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Strategia</a></li>
+                                        <li><a href="#">Economia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/voidfall.webp" alt="Voidfall">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>Voidfall</strong> è un gioco di strategia spaziale in cui i giocatori
+                                    controllano civiltà
+                                    galattiche in lotta per il dominio.
+                                    Combina meccaniche di 4X con una forte enfasi sulla gestione delle risorse e la
+                                    strategia a lungo
+                                    termine.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Strategia, 4X</p>
+                                    <p><strong>Numero di giocatori:</strong> 1-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 120-240 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Spaziale</a></li>
+                                        <li><a href="#">4X</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/arcs.jpg" alt="Arcs">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>Arcs</strong> è un gioco di strategia spaziale con un forte focus narrativo.
+                                    I
+                                    giocatori
+                                    assumono il ruolo di fazioni in lotta per il potere, con eventi che cambiano
+                                    dinamicamente il corso
+                                    della partita.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Strategia, Narrativo</p>
+                                    <p><strong>Numero di giocatori:</strong> 2-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 60-120 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Spaziale</a></li>
+                                        <li><a href="#">Narrativo</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/wingspan.jpg" alt="Wingspan">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>⭐Wingspan</strong> è un gioco da tavolo competitivo in cui i giocatori
+                                    assumono
+                                    il ruolo di
+                                    appassionati di ornitologia e cercano di attirare gli uccelli migliori nelle loro
+                                    riserve naturali.
+                                    Il gioco presenta meccaniche di engine-building e una forte componente educativa
+                                    sulla
+                                    fauna avicola.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Engine-building, Strategia</p>
+                                    <p><strong>Numero di giocatori:</strong> 1-5</p>
+                                    <p><strong>Tempo di gioco:</strong> 40-70 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Strategia</a></li>
+                                        <li><a href="#">Natura</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/ahoy.png" alt="Ahoy">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>Ahoy</strong> è un gioco asimmetrico in cui i giocatori assumono il ruolo di
+                                    pirati e
+                                    pattugliatori navali in cerca di gloria e tesori.
+                                    Ogni fazione ha meccaniche e obiettivi unici, creando un'esperienza di gioco varia e
+                                    rigiocabile.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Asimmetrico, Avventura</p>
+                                    <p><strong>Numero di giocatori:</strong> 2-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 45-75 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Pirati</a></li>
+                                        <li><a href="#">Strategia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/cascadia.jpg" alt="Cascadia">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>Cascadia</strong> è un gioco di piazzamento tessere e pattern-building in
+                                    cui i
+                                    giocatori creano
+                                    un ecosistema bilanciato con animali e habitat.
+                                    Ogni scelta strategica influisce sulla creazione di combinazioni vincenti.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Piazzamento tessere, Strategia</p>
+                                    <p><strong>Numero di giocatori:</strong> 1-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 30-45 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Natura</a></li>
+                                        <li><a href="#">Tessere</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/defender_of_the_wild.webp" alt="Defender of the Wild">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>Defender of the Wild</strong> è un gioco di strategia e avventura in cui i
+                                    giocatori
+                                    interpretano guardiani della natura che devono proteggere l'ambiente da minacce
+                                    esterne.
+                                    Il gioco combina meccaniche di gestione risorse con narrazione immersiva.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Strategia, Narrativo</p>
+                                    <p><strong>Numero di giocatori:</strong> 1-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 60-90 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Avventura</a></li>
+                                        <li><a href="#">Ecologia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="section2" class="hidden">
+                <h2>Mid rank</h2>
+                <p>Ho suddiviso i giochi in scatola in tre categorie per raggiungere la tripla cifra:
+                    <strong>High, Mid
+                        e Low</strong>,
+                    ciascuna basata su criteri specifici. Queste liste sono dinamiche: un gioco può spostarsi tra
+                    categorie adiacenti in
+                    base agli stessi criteri. Tuttavia, se un gioco scende di livello ed è già nella categoria
+                    <strong>Low</strong>, può
+                    essere rimosso dalla lista. Inoltre, i tre migliori giochi di ogni categoria sono evidenziati con
+                    una stellina
+                    accanto al nome⭐. Utilizzate il link qui sotto per cercare i giochi:
+                </p>
+                <div class="link">
+                    <ul>
+                        <li><a href=" https://fantasiastore.it/it/">Fantasia</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/troyes.png" alt="Troyes">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>⭐Troyes</strong> è un gioco di piazzamento dadi e gestione risorse
+                                    ambientato
+                                    nel
+                                    Medioevo. I
+                                    giocatori assumono il ruolo di influenti famiglie della città di Troyes e competono
+                                    per
+                                    il controllo
+                                    delle aree chiave, sfruttando il lavoro dei cittadini e gestendo eventi storici.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Strategia, Gestione dadi</p>
+                                    <p><strong>Numero di giocatori:</strong> 2-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 90 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Medievale</a></li>
+                                        <li><a href="#">Strategia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/pyramidice.jpg" alt="Piramydice">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>Piramydice</strong> è un gioco di dadi e gestione risorse ambientato
+                                    nell'Antico
+                                    Egitto. I
+                                    giocatori costruiscono piramidi e sviluppano la loro civiltà attraverso il
+                                    posizionamento strategico dei
+                                    dadi e la raccolta di risorse.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Dadi, Strategia</p>
+                                    <p><strong>Numero di giocatori:</strong> 1-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 45-60 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Antico Egitto</a></li>
+                                        <li><a href="#">Dadi</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/bitoku.jpg" alt="Bitoku">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>Bitoku</strong> è un gioco strategico ambientato in un mondo ispirato alla
+                                    mitologia giapponese.
+                                    I giocatori assumono il ruolo di spiriti guardiani che cercano di ascendere e
+                                    diventare
+                                    grandi
+                                    protettori della foresta, utilizzando carte, dadi e posizionamento lavoratori.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Gestione risorse, Strategia</p>
+                                    <p><strong>Numero di giocatori:</strong> 1-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 90-120 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Mitologia</a></li>
+                                        <li><a href="#">Fantasy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/yak.jpg" alt="Yak">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>Yak</strong> è un gioco di costruzione e gestione risorse in cui i giocatori
+                                    devono ottenere
+                                    materiali trasportati da carovane di yak per costruire torri di pietra nel
+                                    villaggio.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Piazzamento risorse, Strategia</p>
+                                    <p><strong>Numero di giocatori:</strong> 2-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 30-45 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Animali</a></li>
+                                        <li><a href="#">Gestione risorse</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/war_of_whisper.webp" alt="War of Whispers">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>⭐War of Whispers</strong> è un gioco di strategia e intrighi in cui i
+                                    giocatori
+                                    non controllano
+                                    direttamente un esercito, ma influenzano in segreto le grandi fazioni in guerra per
+                                    ottenere il potere.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Strategia, Intrigo</p>
+                                    <p><strong>Numero di giocatori:</strong> 2-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 60-90 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Politica</a></li>
+                                        <li><a href="#">Guerra</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/arkNova.webp" alt="Ark Nova">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>Ark Nova</strong> è un gioco di gestione in cui i giocatori costruiscono e
+                                    sviluppano uno zoo
+                                    moderno con l'obiettivo di bilanciare la conservazione della fauna con il successo
+                                    economico.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Gestione risorse, Strategia</p>
+                                    <p><strong>Numero di giocatori:</strong> 1-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 90-150 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Zoo</a></li>
+                                        <li><a href="#">Strategia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/apiary.webp" alt="Apiary">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>Apiary</strong> è un gioco di strategia e gestione risorse in cui i
+                                    giocatori
+                                    controllano
+                                    colonie di api intergalattiche che devono espandere i loro alveari e raccogliere
+                                    risorse
+                                    per
+                                    sopravvivere.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Gestione risorse, Fantascienza</p>
+                                    <p><strong>Numero di giocatori:</strong> 1-5</p>
+                                    <p><strong>Tempo di gioco:</strong> 60-90 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Api</a></li>
+                                        <li><a href="#">Fantascienza</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/orleans.webp" alt="Orleans">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>Orleans</strong> è un gioco di costruzione del mazzo e gestione lavoratori
+                                    ambientato nella
+                                    Francia medievale, dove i giocatori competono per sviluppare la loro città e
+                                    commerciare
+                                    risorse.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Strategia, Piazzamento lavoratori</p>
+                                    <p><strong>Numero di giocatori:</strong> 2-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 90 minuti</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/white_castle.webp" alt="White Castle">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>White Castle</strong> è un gioco di piazzamento lavoratori ambientato in
+                                    Giappone, dove i
+                                    giocatori devono gestire le proprie risorse per ottenere prestigio e influenza
+                                    presso il
+                                    castello
+                                    Himeji.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Strategia, Piazzamento lavoratori</p>
+                                    <p><strong>Numero di giocatori:</strong> 1-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 60-90 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Giappone</a></li>
+                                        <li><a href="#">Gestione risorse</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="regalo">
+                        <div class="contenuto">
+                            <div class="img">
+                                <img src="img/3000_canaglie.jpg" alt="3000 Canaglie">
+                            </div>
+                            <div class="descrizione">
+                                <div class="testo">
+                                    <strong>⭐3000 Canaglie</strong> è un gioco di carte e gestione risorse con
+                                    un’ambientazione futuristica e
+                                    cyberpunk. I giocatori reclutano personaggi unici con abilità speciali per ottenere
+                                    vantaggi strategici.
+                                </div>
+                                <div class="info">
+                                    <p><strong>Genere:</strong> Strategia, Deck-building</p>
+                                    <p><strong>Numero di giocatori:</strong> 2-4</p>
+                                    <p><strong>Tempo di gioco:</strong> 60 minuti</p>
+                                </div>
+                                <div class="link">
+                                    <ul>
+                                        <li><a href="#">Cyberpunk</a></li>
+                                        <li><a href="#">Carte</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="section3" class="hidden">
+                <h2>Low rank</h2>
+                <p>Ho suddiviso i giochi in scatola in tre categorie per raggiungere la tripla cifra:
+                    <strong>High, Mid
+                        e Low</strong>,
+                    ciascuna basata su criteri specifici. Queste liste sono dinamiche: un gioco può spostarsi tra
+                    categorie adiacenti in
+                    base agli stessi criteri. Tuttavia, se un gioco scende di livello ed è già nella categoria
+                    <strong>Low</strong>, può
+                    essere rimosso dalla lista. Inoltre, i tre migliori giochi di ogni categoria sono evidenziati con
+                    una stellina
+                    accanto al nome⭐. Utilizzate il link qui sotto per cercare i giochi:
+                </p>
+                <div class="link">
+                    <ul>
+                        <li><a href=" https://fantasiastore.it/it/">Fantasia</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <div class="list">
+
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/seti.jpg" alt="Seti">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Seti</strong> è un gioco di strategia e esplorazione in cui i giocatori
+                                        cercano di
+                                        decifrare segnali dallo spazio, bilanciando risorse e avanzando nella ricerca
+                                        scientifica.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Genere:</strong> Strategia, Esplorazione</p>
+                                        <p><strong>Numero di giocatori:</strong> 2-4</p>
+                                        <p><strong>Tempo di gioco:</strong> 60-90 minuti</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a href="#">Spaziale</a></li>
+                                            <li><a href="#">Strategia</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/everdell.jpg" alt="Everdell">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Everdell</strong> è un gioco di piazzamento lavoratori ambientato in un
+                                        mondo
+                                        fiabesco, in cui i giocatori costruiscono e sviluppano la propria città nel
+                                        cuore
+                                        della foresta.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Genere:</strong> Piazzamento lavoratori, Gestione risorse</p>
+                                        <p><strong>Numero di giocatori:</strong> 1-4</p>
+                                        <p><strong>Tempo di gioco:</strong> 40-80 minuti</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a href="#">Fiabesco</a></li>
+                                            <li><a href="#">Gestione</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/maple_valley.webp" alt="Maple Valley">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Maple Valley</strong> è un gioco di avventura e gestione, in cui i
+                                        giocatori
+                                        guidano
+                                        piccoli animali della foresta nella preparazione di una grande celebrazione
+                                        comunitaria.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Genere:</strong> Avventura, Family Game</p>
+                                        <p><strong>Numero di giocatori:</strong> 2-4</p>
+                                        <p><strong>Tempo di gioco:</strong> 45-75 minuti</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a href="#">Avventura</a></li>
+                                            <li><a href="#">Family</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/aeons_end.webp" alt="Aeon's End">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>⭐Aeon's End</strong> è un deck-building cooperativo in cui i giocatori
+                                        sono
+                                        maghi che
+                                        combattono potenti nemici per difendere la loro città dall'invasione.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Genere:</strong> Deck-building, Cooperativo</p>
+                                        <p><strong>Numero di giocatori:</strong> 1-4</p>
+                                        <p><strong>Tempo di gioco:</strong> 60 minuti</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a href="#">Cooperativo</a></li>
+                                            <li><a href="#">Deck-building</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/nemesis.webp" alt="Nemesis">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Nemesis</strong> è un gioco semi-cooperativo di sopravvivenza spaziale,
+                                        in
+                                        cui i
+                                        giocatori esplorano un'astronave infestata da creature aliene mentre cercano di
+                                        completare i
+                                        propri obiettivi segreti.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Genere:</strong> Sopravvivenza, Horror</p>
+                                        <p><strong>Numero di giocatori:</strong> 1-5</p>
+                                        <p><strong>Tempo di gioco:</strong> 90-180 minuti</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a href="#">Horror</a></li>
+                                            <li><a href="#">Spaziale</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/insondabili.webp" alt="Insondabili">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>⭐Insondabili</strong> è un gioco di deduzione e tradimento ambientato su
+                                        una
+                                        nave
+                                        transatlantica in viaggio, minacciata da mostri marini e traditori segreti tra i
+                                        passeggeri.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Genere:</strong> Deduzione, Cooperativo</p>
+                                        <p><strong>Numero di giocatori:</strong> 3-6</p>
+                                        <p><strong>Tempo di gioco:</strong> 120-180 minuti</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a href="#">Horror</a></li>
+                                            <li><a href="#">Tradimento</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/obscurio.webp" alt="Obscurio">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>⭐Obscurio</strong> è un gioco di deduzione e comunicazione visiva, in
+                                        cui
+                                        i
+                                        giocatori
+                                        devono collaborare per fuggire da una biblioteca magica mentre un traditore
+                                        cerca di
+                                        confonderli.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Genere:</strong> Deduzione, Party Game</p>
+                                        <p><strong>Numero di giocatori:</strong> 2-8</p>
+                                        <p><strong>Tempo di gioco:</strong> 45 minuti</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a href="#">Party Game</a></li>
+                                            <li><a href="#">Deduzione</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="section4" class="hidden">
+                <h2>Console Games</h2>
+                <div class="list">
+                    <div class="list">
+
+                        <!-- Mario Wonder -->
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/marioWonder.jpeg" alt="Super Mario Bros. Wonder">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Super Mario Bros. Wonder</strong> è una nuova avventura platform 2D che
+                                        introduce
+                                        trasformazioni sorprendenti e un mondo pieno di effetti speciali e segreti da
+                                        scoprire.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Piattaforma:</strong> Nintendo Switch</p>
+                                        <p><strong>Genere:</strong> Platform</p>
+                                        <p><strong>Giocatori:</strong> 1-4</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a
+                                                    href="https://www.amazon.it/SUPER-MARIO-BROS-WONDER-Videogioco-Nintendo/dp/B0C8ZCR12S/ref=sr_1_1?crid=3O935SMWJCS0T&dib=eyJ2IjoiMSJ9.dF_ZHoB-7FiM7P2yYBciGpBQTzjdF9ynvZQ0S2XdpehcZJldJXB0lXy_ZES-tBU70FUoQCDAGc107kCawEEASxKK7XeqaF_iNG7QkgXXxbkqcNKkbXJ2383bbG0YY9vHEZDC2PAP8_YTFWxPgW6fd79fw8arC4aDiSmvOS4C7SSCqgru5ig2_lGlsRypVTvD0PxX17Ei5SYWXN_BNW3rmUpbyST3PWSrTg1crutjpqQCo9JcjCfeNpZiPcK6kWgFbpdvR7xIcYVyqx7h9ckEGFPB3njuglrSl-KaETa1LEwBtYjytDD-IhKGkhjsqOg2fTXEYL0g_K67lL7HIhlpuo_AV_EmCxQMG57wQg_WMnbjS87cLMGyFPd7w4JAkmnNHISgSMngHycqSpi81WOkE2JA11tYaw16nPNFIUaY3ho6vpyEnRmpK3ry0cb8yIE0.F1gv1G1H3_NjGg9GmIR5JQdJopynD1cMUb1abLJUSgs&dib_tag=se&keywords=mario+wonder+nintendo+switch&qid=1742815818&sprefix=mario+wonder%2Caps%2C73&sr=8-1">Amazon</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Zelda Tears of the Kingdom -->
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/Zelda.jpeg" alt="Zelda Tears of the Kingdom">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>The Legend of Zelda: Tears of the Kingdom</strong> è il sequel di Breath
+                                        of the
+                                        Wild,
+                                        con un mondo espanso che include isole nel cielo e nuovi poteri per Link.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Piattaforma:</strong> Nintendo Switch</p>
+                                        <p><strong>Genere:</strong> Avventura, Open World</p>
+                                        <p><strong>Giocatori:</strong> 1</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a
+                                                    href="https://www.amazon.it/Legend-Zelda-Videogioco-Nintendo-Italiana/dp/B0BLZMC461/ref=sr_1_4?crid=3LO33B9YGDOXW&dib=eyJ2IjoiMSJ9.UXYMFzqH-8E3Z9pIg37jawsoLg8s_8qM_EsV4y7z3tg4qnNNUt2wwWjbySxT2vEQrgAaVhy7XQzpS7kxM_M6e1uVU1zddaryNp5BzhbnVGEC3Qi8LvZ2diGTjDH0BMHRUCfvhLmiZmSmqyqUnTBKMXZDTaS6Pw891-7Ki7xrkRvRPoUXFVjVC79Ldw4jARGQUYuZlSuCSjp5ELiDITFFtuIGx8T__6UJTxy3wEXJSa8ktX9C7yE94b3n4dTJyArs52JJiQsr76jk5po9NBjaB2WdfDM0YYXUlTAUvDF4EacGNhycoZyejlBJr1HU7te3Cy0hzvXjKAkCNP-5FGQ2ICGh4UY--93KdBgEh4ims29IudCyvA7tHxWRVquTZowdADl373Z_sofr3iHLegeBmaIXCwSI7BBwTNJpPvzhqyMEMvFyuCbZ8tslUBORNb3U.1v1GBqga2V_CGzS76M3PtCBJwbNOr4xYK8-71M442KU&dib_tag=se&keywords=zelda+tears+of+the+kingdom&qid=1742815854&sprefix=zelda%2Caps%2C102&sr=8-4">Amazon</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Octopath Traveler -->
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/op2.jpg" alt="Octopath Traveler">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Octopath Traveler 2</strong> è un RPG con un sistema di combattimento
+                                        strategico a
+                                        turni,
+                                        una storia profonda e una grafica in stile HD-2D.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Piattaforma:</strong> Nintendo Switch</p>
+                                        <p><strong>Genere:</strong> RPG, Strategia</p>
+                                        <p><strong>Giocatori:</strong> 1</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a
+                                                    href="https://www.amazon.it/Square-Enix-Octopath-Traveler-II/dp/B0BFXFRBN4/ref=sr_1_1?crid=2FQZJVD1BS6A3&dib=eyJ2IjoiMSJ9.9_gO6e6a9AM3r5ECaoVGn0dnpMVSgxgMy3lQt9itRCUAImYXdNzKmz7zgHbAJt68k1FXjR8wLKVwiQ720p1_4o_jTbVs7kSWWjkdQmZ-jkQonAFPkqKyvLEu9A08IdnvN_Z34J4wiM0ntlRlaz95Ix0iWBGNzUk1SidOflA-NdI57vDRy7bCQV0T28Er6QJCm0AK1WLMWmH6ivs_UFgB3d6dt4YpG2MkG4p7qA9Il9Lj9CrBoYxvlzlFkPqruPswo7d3MnCtC8ZmnV-iDD4sSyny01zguNwsRsUm4sbn5HO2swriKcGrnK0B8c02qHwR7jJ8htqCzGz6UEPK-rHL86uBxKChStTmX6Gki7sn9d5FURTkVrV2iMWVajRuOZCr3V3o8QcjA5OOy8j_72jEM3aX2GCg1SXPxebK6W_JWcqjfOZ8ePVr8v8QYgPb0plE.W8aFAd-Y8tLzSuQ2ueDr4MUZrCzYvSJUMu3GLPb8VhA&dib_tag=se&keywords=octopath+traveler+2&qid=1742815895&sprefix=oct%2Caps%2C113&sr=8-1">Amazon</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cult of the Lamb -->
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/cult.webp" alt="Cult of the Lamb">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Cult of the Lamb</strong> è un rogue-like che mescola azione e gestione,
+                                        in cui
+                                        il giocatore guida un culto oscuro e affronta nemici sovrannaturali.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Piattaforma:</strong> Nintendo Switch</p>
+                                        <p><strong>Genere:</strong> Rogue-like, Gestione</p>
+                                        <p><strong>Giocatori:</strong> 1</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a
+                                                    href="https://www.amazon.it/Cult-of-the-Lamb-Switch/dp/B0BJ44SZ4L/ref=sr_1_2?crid=3MKE89Y4TI61X&dib=eyJ2IjoiMSJ9.nb9WukOXeZWRRVeJbEUzoi2MMRYt_TpHpRDGGB6cvaV8BxlCbFPoiYd7lKMspBXck3csrTrS0IWDVneCLgxau1RC80qnzlveUdqcZKjJSKIdyYXPLJfmezWuCniNuiEMwW6Q_-Bvxyg0J6jMzONPR7RisM1jpv99zHxdgae2dxuY3Z2auWd43273-yQRTbGY_E4e4A3M61NvMqEvpeom-CeSo7AXZiHk63qNf7GNmZWUF3ViDezL27WXRsDgv82dpWPDGPkgFeCmAsjpCibHahpkIVuvBSBNDmlozMX6-mFtXYYaqh_sraJMBqMzWL8dvVtH0W0YWdyCdmtOU0LKK1EGYGpuKXOt2U-2x6SUHoKXjtyo9ZRg7oN7XmkiweHJn12OL6JfCVbMcGgMSOcFb4RvvoDztHMTw9LQmp49rxtjp5EOiCnoX7wVPe8k1inC.M2Lr9_4M0G2vSCo77l-Lmn6bZGtMlXi8FySG2pe3APU&dib_tag=se&keywords=cult+of+the+lamb+switch&qid=1742815948&sprefix=cult+o%2Caps%2C95&sr=8-2">Amazon</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Wu Kong -->
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/wu.webp" alt="Wu Kong">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Wu Kong</strong> è un action RPG ispirato alla leggenda del Re Scimmia,
+                                        con
+                                        combattimenti
+                                        dinamici e un'ambientazione epica.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Piattaforma:</strong> PlayStation</p>
+                                        <p><strong>Genere:</strong> Action RPG</p>
+                                        <p><strong>Giocatori:</strong> 1</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a
+                                                    href="https://www.amazon.it/PM-Studios-Black-Myth-Wukong/dp/B0DKFBYTY7/ref=sr_1_1?crid=370O8HKNC21JQ&dib=eyJ2IjoiMSJ9.p9HhhpnPLwmrAWdZ2jocu6wCz9WHE65onmAbe5BAsqt_uRYpScYeGUAVq8Gx_zRRcYyok6cZpJGMAqwu--PpkVUYupfnCOujIF7OgzUM8LqJrYglFczwqU6GzJ_28CkNsX5ObExwqbB62XZwGXY4XgTWc9B9Y4Y4GOapPhHDi3mAsQ1tQuAtFzFVrWewp6ioUvQ8UDHHoR-OWv0dLZDi9kNDaZJnYk49Q2Z1yAo2BTewvXNN_97dUCLv4LEKiKFq_73-Q-CJeKqoS-tv8Y2F1HL_RAQQ26eb0G2C7DTIAjCofxzj_tZM4RRgDqeyPbSouvKsIAFCW53cWRTNUbuymIQbNZ8eZYMGnCreDS3SvLvAGMzWBL-rXzid7YZweVGzaizESJOB1AGvStlQSoZIptCyq7Uvqfr8J4e-SGjpGUw.pTuubEW2JuW5u-h7kno3pq5g3YI1e1vCqBK36VyqHEk&dib_tag=se&keywords=wu+kong+ps5&qid=1742816104&sprefix=wu+kong+%2Caps%2C91&sr=8-1">Amazon</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hogwarts Legacy -->
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/hog.webp" alt="Hogwarts Legacy">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Hogwarts Legacy</strong> è un open-world ambientato nell'universo di
+                                        Harry Potter,
+                                        in cui il giocatore esplora Hogwarts e padroneggia la magia.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Piattaforma:</strong> PlayStation</p>
+                                        <p><strong>Genere:</strong> Open World, Avventura</p>
+                                        <p><strong>Giocatori:</strong> 1</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a
+                                                    href="https://www.amazon.it/Warner-Bros-Hogwarts-Legacy-PS5/dp/B08KV8KKTV/ref=sr_1_1?crid=1R2PA45DX1U2N&dib=eyJ2IjoiMSJ9.CYhkFISwrekp9LwtewRAJ3bBq2FiU85GTafI05vqCV7gpEP-1DKhovDh9HLkCeRA4Z-FZK9YOsE4sYnxrCF1_fp_i91qHVzKNgmpL2pjB_TBb1ydioe8cJ2VWXfm0xo-C33UxVbmfOIvn6qdmQ1k0mld2vZ3JJrG0Wis_LPz1ShIFHvq6DoYjim5IgKi2g37Yo69L3h5-8mT1RUfeyANq6z0W-BrP8HxN5u0334Cfqsg2UqvBg7zCTrEFBIt6rg4YZ8Lynpd-tDCpdT3c-vnQlZVfFYyfHGSteOTuuvNRM9CGrx38u03iCCz82_myN3ltssel1BDtQeFjkDhpiqpPeZlWyNGaYUDbgijGYaIoHZ6-rFytj_KUgafADzrgtgWfABeiIj63Ro-xGdhGz8oByr6qfFrC4k0Klrsf1iDLBshtkFXefiXLNpG7SVrOjrD.OpnA7-5R1WRyVLthf7ZXMf-iH7CELZ2eQPl4r-Kk3fk&dib_tag=se&keywords=hogwarts+legacy+ps5&qid=1742815978&sprefix=hogwa%2Caps%2C108&sr=8-1">Amazon</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Assassin’s Creed Shadows -->
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/acs.jpg" alt="Assassin’s Creed Shadows">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Assassin’s Creed Shadows</strong> è il nuovo capitolo della saga,
+                                        ambientato nel
+                                        Giappone feudale, con meccaniche stealth e combattimenti dinamici.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Piattaforma:</strong> PlayStation</p>
+                                        <p><strong>Genere:</strong> Azione, Open World</p>
+                                        <p><strong>Giocatori:</strong> 1</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a
+                                                    href="https://www.amazon.it/Assassins-Shadows-Limited-Esclusivo-Amazon/dp/B0D362TD16/ref=sr_1_1?crid=VPAKV2GS5I8&dib=eyJ2IjoiMSJ9.D3GN0N13dHKp1nggOwpdmjnhJv83uYML-lYdFRgCPtQaKb35A6Rcg6ntjEt8ifFe48lwY0S3YLmAHKA7IoXqzvII1fXt-MpeS1og3_Qjt5-aAZt1OvK9MJ5U-4Ue9ldESA6XpoOPy752NBrrIDC26Fnk93s0LxltTCdsmup83UBxXs_PPdrUlFfPT_PbgJzDQffE2S6dtpgnvjVBkhhu-KQFaf1dk8bnKfoxDdCqCq0AujF28YVJ_Yx0Kwd0rs0DZ4BgTKIEHeLrSwqVYEJhKz3bJ9ajgf9ouLkc73Rwz-zkWOiwtuzBiiIX-hJSwlmVzsSgy5vfraCxM2Vffc4KsNM9ptUxpH2TchvxOoHvcYjkIhTTHANRxD3tOAuK1bZagS2vn2KRBlKxPT3Ylo2ozMLljLScKm7YCMsorCWyK4ySJdEpOFxHf8ky6HXurjAx.Z8sz23uU4e0U8MtvQsgWx33rWgqW8XAyyt1SgfCPG9g&dib_tag=se&keywords=ac+shadows+ps5&qid=1742815998&sprefix=Ac+s%2Caps%2C105&sr=8-1">Amazon</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="section5" class="hidden">
+                <h2>Libri e Manga</h2>
+                <div class="list">
+                    <div class="list">
+
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/sfortuna.jpg" alt="Una serie di sfortunati eventi">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Una serie di sfortunati eventi</strong> è una saga di libri che racconta
+                                        le
+                                        disavventure degli orfani Baudelaire, perseguitati dal malvagio Conte Olaf.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Autore:</strong> Amazon</p>
+                                        <p><strong>Genere:</strong> Narrativa per ragazzi, Mistero</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a
+                                                    href="https://www.amazon.it/infausto-inizio-serie-sfortunati-eventi/dp/8831018086/ref=tmm_pap_swatch_0">Amazon</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/diario.jpeg" alt="Diari di una speziale">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Diari di una speziale</strong> è un romanzo storico che segue la vita di
+                                        una giovane
+                                        speziale in un'epoca in cui la conoscenza delle erbe può essere un'arma o una
+                                        salvezza.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Autore:</strong> Sarah Penner</p>
+                                        <p><strong>Genere:</strong> Storico, Mistero</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a
+                                                    href="https://www.amazon.it/diari-della-speziale-Vol/dp/8834910109/ref=pd_bxgy_d_sccl_1/257-9065525-6128128?pd_rd_w=jaoIy&content-id=amzn1.sym.bebcaae8-85b9-4944-951b-8428874a124f&pf_rd_p=bebcaae8-85b9-4944-951b-8428874a124f&pf_rd_r=ZA79Y1024FK93H5MXFXE&pd_rd_wg=wxXoh&pd_rd_r=c089a372-83ac-41d6-be4c-a4ea5f3a981b&pd_rd_i=8834910109&psc=1">Manga
+                                                    7</a>
+                                            </li>
+                                            <li><a
+                                                    href="https://www.amazon.it/diari-della-speziale-Vol/dp/8834910702/ref=pd_bxgy_thbs_d_sccl_1/257-9065525-6128128?pd_rd_w=MyW4c&content-id=amzn1.sym.bebcaae8-85b9-4944-951b-8428874a124f&pf_rd_p=bebcaae8-85b9-4944-951b-8428874a124f&pf_rd_r=7M43G4ME359HKQJNA500&pd_rd_wg=31o2r&pd_rd_r=5b98ccb3-cf2b-4dae-94d7-59f0b336b069&pd_rd_i=8834910702&psc=1">Manga
+                                                    8</a>
+                                            </li>
+                                            <li><a
+                                                    href="https://www.amazon.it/diari-della-speziale-Vol/dp/8834911350/ref=pd_bxgy_d_sccl_2/257-9065525-6128128?pd_rd_w=rUX7E&content-id=amzn1.sym.bebcaae8-85b9-4944-951b-8428874a124f&pf_rd_p=bebcaae8-85b9-4944-951b-8428874a124f&pf_rd_r=XDTZP07ENG7VCE6JRH5V&pd_rd_wg=Sb4kz&pd_rd_r=e12cd781-623c-4f27-8bae-a81ecdcf818e&pd_rd_i=8834911350&psc=1">Manga
+                                                    9</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" regalo">
+                            <div class="contenuto">
+                                <div class="img">
+                                    <img src="img/drstone.jpg" alt="Dr. Stone">
+                                </div>
+                                <div class="descrizione">
+                                    <div class="testo">
+                                        <strong>Dr. Stone</strong> è un manga che segue la
+                                        storia di Senku, un ragazzo
+                                        geniale che
+                                        cerca di ricostruire la civiltà umana con la scienza
+                                        dopo che l’umanità è stata
+                                        pietrificata.
+                                    </div>
+                                    <div class="info">
+                                        <p><strong>Autore:</strong> Riichiro Inagaki</p>
+                                        <p><strong>Genere:</strong> Avventura, Fantascienza</p>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a
+                                                    href="https://www.amazon.it/Dr-Stone-12-Riichiro-Inagaki/dp/8822619978/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=MRTVZ6DEOBG8&dib=eyJ2IjoiMSJ9.3oPGtV5aC7NjNF20sMlyqq_xRxdOyfW83OqnMR6QyEhe1ARlVy2aIYpOAfPRoBuwTTLbMjMfcQmlg35CR1TDD29VaHC8sIW_325PtrPhLqUGbhzpCryJHc0p_rd8W-DikHwZZIJ4HbPHwVIOyuXskbHkuLnPb7lfiL7sB18y8NofurJ5H21OqxX0WEuFdh3KnOs9bFXgKII47bsZWl42uyRlkyJ3mNtTAclUeoh1EW0.di-0EvMPeLUWlmgM5wHZtKWpWCmk2eve-q9bKOta4NM&dib_tag=se&keywords=dr+stone+12&qid=1742763661&s=books&sprefix=dr+stone+12%2Cstripbooks%2C104&sr=1-1">Manga
+                                                    12</a></li>
+                                            <li><a
+                                                    href="https://www.amazon.it/Dr-Stone-Vol-Riichiro-Inagaki/dp/8822620356/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2DHXTU07F04W1&dib=eyJ2IjoiMSJ9.CYEux-idvdj-Q_IHE5ymHuzQwok9jYTa7kI9-d4b-s0QlupwfrCfms3pXwSvSSi8dfskFaYnAzBnokXue-SeHYDEA8hwY7kMnnnb-6wX9_yoVEvDpzXsvG_T8nGGr5HHBbjZZfkI7jM0hg9qKVvsVJjfU24sBvcih5-7_nkIpC2bEr5DLVrvlAxqm4IoKQrnnOs9bFXgKII47bsZWl42u4NbpHCYbn3qeo4IxfBI0lU.cnDKMt5nC7XsD5PVL4XiG_YIXFa9rIr0kq2phZVJHCw&dib_tag=se&keywords=dr+stone+13&qid=1742763674&s=books&sprefix=dr+stone+13%2Cstripbooks%2C135&sr=1-1">Manga
+                                                    13</a></li>
+                                            <li><a
+                                                    href="https://www.amazon.it/Dr-Stone-Vol-Riichiro-Inagaki/dp/882262114X/ref=sr_1_1?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3HOENFWC0OGNK&dib=eyJ2IjoiMSJ9.hKYpV91l6TYtufTM5odMFGIWjntLwyQyxjmXjkY_r1FspDDnRdeQedeBCgLX5HIOI_sxeC7Ue_JMfkJqyNeTQk0rgc2YIJxL9exSF4FyqECXacyjUue14ZvE3GE1RaRJ_t3eka2TZCcwadX--jSpctQP6Zgdb_DEMXWXLu6TvTwD1RJ3azgzMS7SIHBR0Q6_TQ59YJWwwcxJhmji_7_vXwF5rDKtZdx8d3cqYN3vnmI.DowjTzl_I4SYvEIGIVu2B6qp94xjLGaiY52JOjwo9kw&dib_tag=se&keywords=dr+stone+14&qid=1742763689&s=books&sprefix=dr+stone+1%2Cstripbooks%2C272&sr=1-1">Manga
+                                                    14</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let word = {
+                "4iur-mr6h-zrvj-elgh": "section1",
+                "sugi-3rgh-au3z-1piu": "section2",
+                "fprt-tltz-7ujk-2rtg": "section3",
+                "2u5y-nuna-aitz-3ty2": "section4",
+                "8utr-iyvn-6uyi-igiq": "section5",
+                "mani-fest-azi-1": ["section1", "section2", "section3", "section4", "section5"],
+                "a---": ["section1", "section2", "section3", "section4", "section5"]
+            };
+
+            function checkCode() {
+                let code = [
+                    document.getElementById("cell1").value,
+                    document.getElementById("cell2").value,
+                    document.getElementById("cell3").value,
+                    document.getElementById("cell4").value
+                ].join("-");
+
+                console.log("Codice inserito:", code);
+
+                if (word.hasOwnProperty(code)) {
+                    let sections = word[code];
+
+                    if (Array.isArray(sections)) {
+                        // Se il codice corrisponde a un array, mostra tutte le sezioni contenute
+                        sections.forEach(section => {
+                            document.getElementById(section).style.display = "block";
+                        });
+                        console.log("Tutte le sezioni sono state sbloccate!");
+                    } else {
+                        // Se il codice corrisponde a una singola sezione, mostra solo quella
+                        document.getElementById(sections).style.display = "block";
+                        console.log(`Sezione sbloccata: ${sections}`);
+                    }
+                } else {
+                    alert("Codice errato! Riprova.");
+                    console.log("Codice errato.");
+                }
+            }
+
+            document.getElementById("verifyButton").addEventListener("click", checkCode);
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

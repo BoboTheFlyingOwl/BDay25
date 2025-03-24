@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/gameStyle.css">
+    <link rel="stylesheet" href="../css/norinori.css">
+    <title>Norinori</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <img src="../img/BannerShort.png">
+
+            <div class="menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a class="active" href="#Parola_segreta_:)">Norinori</a></li>
+                    <li><a href="diagonali.html">gioco2</a></li>
+                    <li><a href="mastermind.html">gioco3</a></li>
+                    <li><a href="nonogram.html">gioco4</a></li>
+                    <li><a href="binario.html">gioco5</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="game">
+                <div class="gameTable" id="gameTable">
+
+                </div>
+                <div class="gameButton">
+                    <button onclick="resetGame()">Reset</button>
+
+                    <select id="puzzleSelect" onchange="loadPuzzle()">
+                        <option value="puzzle1">Puzzle 1</option>
+                        <option value="puzzle2">Puzzle 2</option>
+                        <option value="puzzle3">Puzzle 3</option>
+                        <option value="puzzle4">Puzzle 4</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="rules">
+                <h2>Regole</h2>
+
+                <b>Norinori</b> è un rompicapo logico con regole semplici e soluzioni impegnative.
+
+                Le regole di Norinori sono semplici:
+                Devi ombreggiare alcune celle in modo tale che:
+                <ul>
+                    <li>Esattamente 2 celle risultino ombreggiate in ogni regione.</li>
+                    <li>Ogni cella ombreggiata deve far parte di un domino(=una forma composta da due celle ombreggiate
+                        una accanto all'altra (1x2 o 2x1).). I domino possono attraversare i confini della regione.</li>
+                    <li>Le tessere del domino non possono toccarsi se non in diagonale.</li>
+                </ul>
+                Le tessere si formano con le caselle grige(primo click). Le caselle bianche con la x rossa ( secondo
+                click) indicano l'impossibilita di avere una obreggiatura in quella casella, queste tipo di caselle sono
+                uguali alle caselle bianche vuote.
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../script/norinori.js">
+
+    </script>
+
+</body>
+
+</html>

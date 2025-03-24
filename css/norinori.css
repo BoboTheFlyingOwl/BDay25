@@ -1,0 +1,53 @@
+.gameTable {
+    display: grid;
+    gap: 0;
+    background-color: #333;
+    padding: 10px;
+    width: max-content;
+    margin: auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: white !important;
+    /* Forza il colore bianco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.cellSelected {
+    background-color: grey !important;
+}
+
+.cellNotPossible {
+
+    width: 100px;
+    height: 100px;
+    background-color: white !important;
+    /* Forza il colore bianco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 1px solid black;
+    color: red;
+}
+
+.gameButton {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.gameButton button,
+.gameButton select {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}

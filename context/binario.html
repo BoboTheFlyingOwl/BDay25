@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/gameStyle.css">
+    <link rel="stylesheet" href="../css/binarion.css">
+    <title>Binario</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <img src="../img/BannerShort.png">
+
+            <div class="menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#Parola_segreta_:)">gioco1</a></li>
+                    <li><a href="diagonali.html">gioco2</a></li>
+                    <li><a href="mastermind.html">gioco3</a></li>
+                    <li><a href="nonogram.html">gioco4</a></li>
+                    <li><a class="active" href="#Parola_segreta_:)">Binario</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="game">
+                <div class="gameTable" id="gameTable">
+
+                </div>
+                <div class="gameButton">
+                    <button onclick="resetGame()">Reset</button>
+
+                    <select id="puzzleSelect" onchange="loadPuzzle()">
+                        <option value="puzzle1">Puzzle 1</option>
+                        <option value="puzzle2">Puzzle 2</option>
+                        <option value="puzzle3">Puzzle 3</option>
+                        <option value="puzzle3">Puzzle 4</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="rules">
+                <h2>Regole</h2>
+
+                <b>Binairo</b> è un rompicapo logico con regole semplici e soluzioni impegnative.
+
+                Le regole di Binairo sono semplici:
+                Devi riempire la griglia seguendo queste regole:
+                <ul>
+                    <li>Ogni riga e ogni colonna devono contenere lo stesso numero di cerchi bianchi e neri.</li>
+                    <li>Non possono esserci più di due cerchi consecutivi dello stesso colore.</li>
+                    <li>Ogni riga e ogni colonna devono essere uniche (non possono esserci duplicati).</li>
+                </ul>
+
+                Le celle si modificano con il click:
+                <ul>
+                    <li>Primo click: posiziona un cerchio bianco.</li>
+                    <li>Secondo click: trasforma il cerchio in nero.</li>
+                    <li>Terzo click: la cella torna vuota.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="../script/binario.js">
+
+    </script>
+
+</body>
+
+</html>
