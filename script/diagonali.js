@@ -30,7 +30,7 @@ const puzzles = {
             [null, 3, 2, null, null, 2],
             [2, null, null, null, 3, 1],
             [null, null, 4, null, null, null],
-            [null, 1, null, 3, null, 2],
+            [null, 3, null, 1, null, 2],
             [null, null, null, 2, null, null]
         ],
         solution: [
@@ -38,7 +38,7 @@ const puzzles = {
             [1, 1, 1, 2, 1],
             [2, 2, 1, 1, 1],
             [1, 1, 2, 2, 2],
-            [1, 2, 2, 1, 2],
+            [1, 2, 2, 1, 1],
         ],
         word: "sugi",
     },
