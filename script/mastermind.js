@@ -18,14 +18,14 @@ let difficulties = {
     "hard": {
         dimension: 7,
         colors: ["red", "blue", "green", "yellow", "purple", "orange", "cyan", "brown", "pink", "lime", "black", "white", "gold", "silver"],
-        tentativi: 20,
+        tentativi: 30,//20,
         word: "tltz"
     },
     "expert": {
         dimension: 8,
         //colors: ["red", "blue", "green", "yellow", "purple", "orange", "cyan", "brown", "pink", "lime", "black", "white", "gold", "silver", "navy", "maroon", "teal", "beige", "magenta", "olive"],
         colors: ["red", "blue", "green", "yellow", "purple", "orange", "cyan", "brown", "pink", "lime", "black", "white", "gold", "silver", "navy", "maroon"],
-        tentativi: 40,
+        tentativi: 60, //40,
         word: "6uyi"
     }
 };
