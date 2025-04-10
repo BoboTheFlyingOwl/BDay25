@@ -62,7 +62,7 @@ function startGame(level) {
     dimension = gameData.dimension;
     secretSeq = generateSecretSequence([...gameData.colors], dimension);
 
-    Debug.Log("Segreto: " + secretSeq)
+    console.log("Segreto: " + secretSeq)
     maxAttempts = difficulties[level].tentativi
     currentGuess = [];
     attempts = 0;
