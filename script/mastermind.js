@@ -16,14 +16,15 @@ let difficulties = {
         word: "3rgh",
     },
     "hard": {
-        dimension: 8,
-        colors: ["red", "blue", "green", "yellow", "purple", "orange", "cyan", "brown", "pink", "lime", "black", "white", "gold", "silver", "navy", "maroon"],
+        dimension: 7,
+        colors: ["red", "blue", "green", "yellow", "purple", "orange", "cyan", "brown", "pink", "lime", "black", "white", "gold", "silver"],
         tentativi: 20,
         word: "tltz"
     },
     "expert": {
-        dimension: 10,
-        colors: ["red", "blue", "green", "yellow", "purple", "orange", "cyan", "brown", "pink", "lime", "black", "white", "gold", "silver", "navy", "maroon", "teal", "beige", "magenta", "olive"],
+        dimension: 8,
+        //colors: ["red", "blue", "green", "yellow", "purple", "orange", "cyan", "brown", "pink", "lime", "black", "white", "gold", "silver", "navy", "maroon", "teal", "beige", "magenta", "olive"],
+        colors: ["red", "blue", "green", "yellow", "purple", "orange", "cyan", "brown", "pink", "lime", "black", "white", "gold", "silver", "navy", "maroon"],
         tentativi: 40,
         word: "6uyi"
     }
@@ -61,6 +62,7 @@ function startGame(level) {
     dimension = gameData.dimension;
     secretSeq = generateSecretSequence([...gameData.colors], dimension);
 
+    Debug.Log("Segreto: " + secretSeq)
     maxAttempts = difficulties[level].tentativi
     currentGuess = [];
     attempts = 0;
